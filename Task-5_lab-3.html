@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-3 Java Script</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+                $( ".odd" ).click(function() {
+                    $("p:nth-child(odd)").css("background-color", "grey")
+                });
+
+                $( ".even" ).click(function() {
+                    $("p:nth-child(even)").css("background-color","red")
+
+                });
+
+                $( ".first" ).click(function() {
+                    $("p:first").css("background-color","blue")
+
+                });
+
+                $( ".last" ).click(function() {
+                    $("p:last").css("background-color","lightblue")
+
+                });
+
+                $( ".nth" ).click(function() {
+                    para=prompt("Which Paragraph you want to be selected!")
+                    
+                    $("p:nth-child("+para+")").css("background-color","orange").append(" Bla Bla Bla")
+
+                });
+            })
+    </script>
+</head>
+<body>
+    <p class="para1">Paragraph1</p>
+    <p class="para2">Paragraph2</p>
+    <p class="para3">Paragraph3</p>
+    <p class="para4">Paragraph4</p>
+    <p class="para5">Paragraph5</p>
+
+    <button class="odd">Odd</button>
+    <button class="even">Even</button>
+    <button class="first">First</button>
+    <button class="last">Last</button>
+    <button class="nth">Which Paragraph</button>
+</body>
+</html>

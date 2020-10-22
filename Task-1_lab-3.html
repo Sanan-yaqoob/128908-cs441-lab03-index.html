@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-3 Java Script</title>
+
+    <script>
+
+        function getValue(event){
+            var sum=0;
+            var input = document.getElementById("myInput").value;
+          
+            if (event.keyCode === 48 || event.keyCode === 96 ) {
+             event.preventDefault();
+             
+             console.log(input.split(''))
+
+             for(i=0; i<input.length; i++){
+                 sum=parseInt(input[i]) + sum;
+
+             }
+             console.log(sum)
+            }
+        }
+        </script>
+    
+
+</head>
+
+
+<body>
+    <label for="sum">Please enter any number as input and press zero to display the Sum</label>
+    <input id="myInput" value="" onkeydown=getValue(event) type="number">
+
+
+</body>
+</html>
